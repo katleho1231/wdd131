@@ -1,0 +1,101 @@
+/* styles/base.css */
+
+/* 1) Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 2) Color system (use variables for consistency) */
+:root{
+  --primary-color: #004aad;     /* header/footer */
+  --accent-color: #f7b500;      /* hover / accents */
+  --bg: #ffffff;
+  --muted-bg: #f7f7f7;
+  --text: #1a1a1a;
+}
+
+/* 3) Reset / box sizing */
+* { box-sizing: border-box; margin:0; padding:0; }
+html,body{ height:100%; }
+
+/* 4) Body */
+body{
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background: var(--bg);
+  line-height:1.6;
+}
+
+/* 5) Header + course-title block */
+header{
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+#course-title{
+  display: block;          /* required by assignment */
+  font-weight:700;
+  font-size:1.25rem;
+  margin-bottom:0.6rem;
+}
+
+/* 6) Navigation (flex + hover effect) */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:1.25rem;
+  flex-wrap:wrap;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  padding:0.25rem 0.5rem;
+  border-radius:4px;
+  transition: background-color .22s ease, color .22s ease, transform .12s ease;
+  font-weight:500;
+}
+nav a:hover,
+nav a:focus{
+  background: var(--accent-color);
+  color:#000;
+  outline: none;
+  transform: translateY(-1px); /* subtle */
+}
+
+/* 7) Main container (centered + grid cards) */
+main{
+  max-width:900px;        /* limited width */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1.5rem;
+}
+h1{ grid-column: 1 / -1; text-align:center; color:var(--primary-color); margin-bottom:1rem; }
+
+/* Card style */
+.card{
+  background: var(--muted-bg);
+  border-radius:10px;
+  padding:1rem;
+  border:1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  text-align:center;
+}
+.card img{ width:100%; height:auto; border-radius:8px; margin-bottom:0.6rem; }
+
+/* 8) Footer */
+footer{
+  background: var(--primary-color);
+  color:#fff;
+  text-align:center;
+  padding:1rem 0;
+  margin-top:2rem;
+}
+footer p{ margin:0.25rem 0; }
+
+/* 9) Responsive: stack cards on small screens */
+@media (max-width:700px){
+  main{ grid-template-columns: 1fr; }
+  #course-title{ font-size:1.1rem; }
+  nav{ gap:0.8rem; }
+}
