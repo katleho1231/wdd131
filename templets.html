@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album | WDD 131 – Katleho Selwana</title>
+  <meta name="description" content="Temple Album - WDD 131 Dynamic Web Fundamentals - Responsive gallery using flex, grid, and JS menu toggle.">
+  <meta name="author" content="Katleho Selwana">
+  <link rel="stylesheet" href="styles/templets.css">
+  <link rel="stylesheet" href="styles/templets-large.css">
+  <script src="scripts/templets.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menubutton">☰</button>
+    <nav id="menuitems" class="hidden">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Beautiful Temples Around the World</h2>
+
+    <section class="gallery">
+      <figure>
+        <img src="images/OIP.webp" alt="Temple 1">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/accra.webp" alt="Temple 2">
+        <figcaption>Accra Ghana Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/jozi.webp" alt="Temple 3">
+        <figcaption>Johannesburg South Africa Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/R.jpg" alt="Temple 4">
+        <figcaption>Manila Philippines Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/itally.webp" alt="Temple 5">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/OIP (1).webp" alt="Temple 6">
+        <figcaption>São Paulo Brazil Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/paris2.webp" alt="Temple 7">
+        <figcaption>Paris France Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/japn.webp" alt="Temple 8">
+        <figcaption>Tokyo Japan Temple</figcaption>
+    
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Katleho Selwana | South Africa</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

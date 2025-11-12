@@ -1,0 +1,18 @@
+@media (min-width: 700px) {
+  nav {
+    display: flex !important;
+    justify-content: center;
+    background: #004080;
+    gap: 1rem;
+  }
+
+  #menubutton {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
