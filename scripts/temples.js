@@ -1,11 +1,6 @@
-// Navigation menu toggle
-const menubutton = document.querySelector("#menubutton");
-const menuitems = document.querySelector("#menuitems");
+const menubutton = document.getElementById("menubutton");
+const menuitems = document.getElementById("menuitems");
 
 menubutton.addEventListener("click", () => {
   menuitems.classList.toggle("open");
 });
-
-// Footer dynamic year and last modified
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
