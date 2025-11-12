@@ -1,4 +1,4 @@
-// temples.js
+// Navigation menu toggle
 const menubutton = document.querySelector("#menubutton");
 const menuitems = document.querySelector("#menuitems");
 
