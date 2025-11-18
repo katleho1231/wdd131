@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar | Place Page</title>
+    <meta name="description" content="Explore the beauty and culture of Madagascar.">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Beautiful Madagascar</h1>
+    </header>
+
+    <!-- HERO SECTION with srcset -->
+    <section class="hero">
+        <img 
+            src="images/land.jpg"
+            sizes="(max-width: 600px) 500px, 1200px"
+            alt="Landscape of Madagascar">
+    </section>
+
+    <!-- WEATHER SECTION -->
+    <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.png" class="icon-mobile" alt="weather icon"> <!-- mobile -->
+
+        <p>Temperature: <span id="temp">10</span> °C</p>
+        <p>Wind Speed: <span id="wind">6</span> km/h</p>
+        <p>Windchill: <span id="windchill">Calculating...</span></p>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Katleho Selwana | WDD131</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
