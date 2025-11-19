@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madagascar | Place Page</title>
-    <meta name="description" content="Explore the beauty and culture of Madagascar.">
-    <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
-    <script src="scripts/place.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Madagascar | WDD 131 – Katleho Selwana</title>
+
+  <!-- Meta Description (150 characters) -->
+  <meta name="description" content="Explore the beauty, culture, and landscapes of Madagascar. Discover wildlife, climate, traditions, and amazing travel locations across the island." />
+
+  <!-- Meta Author -->
+  <meta name="author" content="Katleho Selwana" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/place.css" />
+
+  <!-- JavaScript -->
+  <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Beautiful Madagascar</h1>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <h1>Explore Madagascar</h1>
+  </header>
 
-    <!-- HERO SECTION with srcset -->
+  <!-- MAIN SECTION -->
+  <main>
+    <!-- HERO SECTION WITH RESPONSIVE IMAGE -->
     <section class="hero">
-        <img 
-            src="images/land.jpg"
-            sizes="(max-width: 600px) 500px, 1200px"
-            alt="Landscape of Madagascar">
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/madagascar-large.webp">
+        <source media="(max-width: 799px)" srcset="images/madagascar-small.webp">
+        <img src="images/madagascar-small.webp" alt="Landscape view of Madagascar">
+      </picture>
     </section>
 
     <!-- WEATHER SECTION -->
     <section class="weather">
-        <h2>Weather</h2>
-        <img src="images/weather.png" class="icon-mobile" alt="weather icon"> <!-- mobile -->
-
-        <p>Temperature: <span id="temp">10</span> °C</p>
-        <p>Wind Speed: <span id="wind">6</span> km/h</p>
-        <p>Windchill: <span id="windchill">Calculating...</span></p>
+      <h2>Weather <span class="icon"></span></h2>
+      <p><strong>Temperature:</strong> <span id="temp-value">22</span> °C</p>
+      <p><strong>Wind Speed:</strong> <span id="speed-value">6</span> km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="windchill">Calculating...</span></p>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> | Katleho Selwana | WDD131</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> | Katleho Selwana | South Africa</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>

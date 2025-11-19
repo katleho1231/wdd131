@@ -1,25 +1,24 @@
-// Footer Year
+// FOOTER YEAR & LAST MODIFIED
 document.getElementById("year").textContent = new Date().getFullYear();
-
-// Last Modified
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Static Weather Values (you can change them)
-const temp = parseFloat(document.getElementById("temp").textContent);
-const wind = parseFloat(document.getElementById("wind").textContent);
+// WIND CHILL CALCULATION
+const temp = parseFloat(document.getElementById("temp-value").textContent);
+const speed = parseFloat(document.getElementById("speed-value").textContent);
+const windchillElement = document.getElementById("windchill");
 
-function calculateWindChill(tempC, windKmh) {
-    return (
-        13.12 +
-        0.6215 * tempC -
-        11.37 * Math.pow(windKmh, 0.16) +
-        0.3965 * tempC * Math.pow(windKmh, 0.16)
-    ).toFixed(1);
+function calculateWindChill(t, s) {
+  // Formula for °C
+  return (
+    13.12 +
+    0.6215 * t -
+    11.37 * Math.pow(s, 0.16) +
+    0.3965 * t * Math.pow(s, 0.16)
+  ).toFixed(1);
 }
 
-// Only calculate if conditions are met
-if (temp <= 10 && wind > 4.8) {
-    document.getElementById("windchill").textContent = calculateWindChill(temp, wind) + " °C";
+if (temp <= 10 && speed > 4.8) {
+  windchillElement.textContent = calculateWindChill(temp, speed) + " °C";
 } else {
-    document.getElementById("windchill").textContent = "N/A";
+  windchillElement.textContent = "N/A";
 }

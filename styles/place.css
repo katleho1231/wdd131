@@ -1,39 +1,48 @@
-/* CSS VARIABLES  */
 :root {
-    --main-color: #009e60; /* Madagascar green */
-    --text-color: #222;
-    --font-main: 'Poppins', sans-serif;
+  --main-color: #00843D; /* Madagascar flag green */
+  --accent-color: #ff0000; /* Madagascar flag red */
+  --text-dark: #222;
+  --text-light: #fff;
+  --font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: var(--font-main);
-    margin: 0;
-    line-height: 1.5;
-    color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: #f4f4f4;
 }
 
 header, footer {
-    background-color: var(--main-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1.2rem;
+  background: var(--main-color);
+  color: var(--text-light);
 }
 
+/* HERO IMAGE */
 .hero img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
+/* WEATHER */
 .weather {
-    padding: 1rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
-.icon-mobile {
-    width: 70px;
-    margin: 0 auto;
+.weather h2::after {
+  content: " ⛅"; /* Large view icon */
 }
 
-footer p {
-    font-size: 0.9rem;
+@media (max-width: 600px) {
+  .weather h2::after {
+    content: "";
+  }
+
+  .weather h2::after {
+    content: url("../images/cloud.svg"); /* SVG icon for mobile */
+  }
 }
