@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Filtered Temples | WDD 131 – Katleho Selwana</title>
-  <link rel="stylesheet" href="styles/filtered-temples.css" />
+
+  <!-- META TAGS REQUIRED -->
+  <meta name="description" content="Temple gallery displaying temples around the world with filter options and responsive design using JavaScript and CSS.">
+  <meta name="author" content="Katleho Selwana">
+
+  <title>Filtered Temples | WDD 131</title>
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
   <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
@@ -12,21 +18,21 @@
   <header>
     <h1>Temple Album</h1>
     <nav>
-      <button id="home">Home</button>
-      <button id="old">Old</button>
-      <button id="new">New</button>
-      <button id="large">Large</button>
-      <button id="small">Small</button>
+      <a href="#" data-filter="all">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
     </nav>
   </header>
 
   <main>
-    <section id="temple-container"></section>
+    <section id="temple-cards" class="cards"></section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Katleho Selwana | South Africa</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> | Katleho Selwana</p>
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>
