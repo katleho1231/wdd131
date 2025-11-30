@@ -1,0 +1,37 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label, legend {
+  font-weight: 600;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.rating label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}

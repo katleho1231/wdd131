@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+
+  <!-- FORM (method MUST be GET & action MUST be review.html) -->
+  <form method="get" action="review.html">
+
+    <!-- PRODUCT SELECT (DYNAMICALLY POPULATED) -->
+    <label for="product">Product Name:</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Select a Product...</option>
+      <!-- JS inserts options here -->
+    </select>
+
+    <!-- OVERALL RATING (RADIO BUTTONS SAME NAME) -->
+    <label>Overall Rating:</label>
+    <div class="rating">
+      <label><input type="radio" name="rating" value="1" required> ★</label>
+      <label><input type="radio" name="rating" value="2"> ★★</label>
+      <label><input type="radio" name="rating" value="3"> ★★★</label>
+      <label><input type="radio" name="rating" value="4"> ★★★★</label>
+      <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+    </div>
+
+    <!-- DATE INSTALLED -->
+    <label for="install">Date of Installation:</label>
+    <input type="date" id="install" name="install" required>
+
+    <!-- USEFUL FEATURES -->
+    <fieldset>
+      <legend>Useful Features (Check all that apply):</legend>
+      <label><input type="checkbox" name="features" value="easy install"> Easy Install</label>
+      <label><input type="checkbox" name="features" value="durable"> Durable</label>
+      <label><input type="checkbox" name="features" value="affordable"> Affordable</label>
+      <label><input type="checkbox" name="features" value="great design"> Great Design</label>
+    </fieldset>
+
+    <!-- WRITTEN REVIEW -->
+    <label for="review">Written Review (Optional):</label>
+    <textarea id="review" name="review" rows="4"></textarea>
+
+    <!-- USER NAME -->
+    <label for="username">Your Name (Optional):</label>
+    <input type="text" id="username" name="username">
+
+    <!-- SUBMIT BUTTON -->
+    <input type="submit" value="Submit Review">
+
+  </form>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Katleho Selwana | South Africa</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
