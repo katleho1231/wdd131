@@ -1,0 +1,30 @@
+/* TYPOGRAPHY */
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* COLOR DEMO BOXES */
+.color-box {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  margin-right: 10px;
+}
+
+.primary { background-color: #1A1A2E; }
+.accent { background-color: #FFCA28; }
+.white { background-color: #fff; }
+
+header {
+  background: #1A1A2E;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
