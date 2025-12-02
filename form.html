@@ -1,74 +1,83 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review Form</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Product review form for selecting a product, rating it, and submitting feedback. WDD 131 – Katleho Selwana.">
+  <meta name="author" content="Katleho Selwana">
 
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>Product Review Form</h1>
+    <h1>Product Review</h1>
   </header>
 
-  <!-- FORM (method MUST be GET & action MUST be review.html) -->
-  <form method="get" action="review.html">
+  <main>
+    <form method="get" action="review.html">
 
-    <!-- PRODUCT SELECT (DYNAMICALLY POPULATED) -->
-    <label for="product">Product Name:</label>
-    <select id="product" name="product" required>
-      <option value="" disabled selected>Select a Product...</option>
-      <!-- JS inserts options here -->
-    </select>
+      <!-- Product select will be filled by JS -->
 
-    <!-- OVERALL RATING (RADIO BUTTONS SAME NAME) -->
-    <label>Overall Rating:</label>
-    <div class="rating">
-      <label><input type="radio" name="rating" value="1" required> ★</label>
-      <label><input type="radio" name="rating" value="2"> ★★</label>
-      <label><input type="radio" name="rating" value="3"> ★★★</label>
-      <label><input type="radio" name="rating" value="4"> ★★★★</label>
-      <label><input type="radio" name="rating" value="5"> ★★★★★</label>
-    </div>
+      <label for="product">Product Name</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
 
-    <!-- DATE INSTALLED -->
-    <label for="install">Date of Installation:</label>
-    <input type="date" id="install" name="install" required>
+      <!-- Rating -->
+      <div class="rating-group">
+        <p>Overall Rating</p>
 
-    <!-- USEFUL FEATURES -->
-    <fieldset>
-      <legend>Useful Features (Check all that apply):</legend>
-      <label><input type="checkbox" name="features" value="easy install"> Easy Install</label>
-      <label><input type="checkbox" name="features" value="durable"> Durable</label>
-      <label><input type="checkbox" name="features" value="affordable"> Affordable</label>
-      <label><input type="checkbox" name="features" value="great design"> Great Design</label>
-    </fieldset>
+        <label for="rate1">☆</label>
+        <input type="radio" id="rate1" name="rating" value="1" required>
 
-    <!-- WRITTEN REVIEW -->
-    <label for="review">Written Review (Optional):</label>
-    <textarea id="review" name="review" rows="4"></textarea>
+        <label for="rate2">☆☆</label>
+        <input type="radio" id="rate2" name="rating" value="2" required>
 
-    <!-- USER NAME -->
-    <label for="username">Your Name (Optional):</label>
-    <input type="text" id="username" name="username">
+        <label for="rate3">☆☆☆</label>
+        <input type="radio" id="rate3" name="rating" value="3" required>
 
-    <!-- SUBMIT BUTTON -->
-    <input type="submit" value="Submit Review">
+        <label for="rate4">☆☆☆☆</label>
+        <input type="radio" id="rate4" name="rating" value="4" required>
 
-  </form>
+        <label for="rate5">☆☆☆☆☆</label>
+        <input type="radio" id="rate5" name="rating" value="5" required>
+      </div>
+
+      <!-- Date -->
+      <label for="install">Date of Installation</label>
+      <input type="date" id="install" name="install" required>
+
+      <!-- Checkboxes -->
+      <div class="features">
+        <p>Useful Features</p>
+
+        <label><input type="checkbox" id="feature1" name="features" value="durable"> Durable</label>
+        <label><input type="checkbox" id="feature2" name="features" value="easy"> Easy to Use</label>
+        <label><input type="checkbox" id="feature3" name="features" value="portable"> Portable</label>
+        <label><input type="checkbox" id="feature4" name="features" value="affordable"> Affordable</label>
+      </div>
+
+      <!-- Review text -->
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review"></textarea>
+
+      <!-- Name -->
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username">
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
 
   <footer>
     <p>&copy; <span id="currentyear"></span> | Katleho Selwana | South Africa</p>
     <p id="lastModified"></p>
   </footer>
-
 </body>
 </html>
+
