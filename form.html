@@ -3,81 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Review Form</title>
 
-  <meta name="description" content="Product review form for selecting a product, rating it, and submitting feedback. WDD 131 – Katleho Selwana.">
+  <title>Product Review Form | WDD 131 – Katleho Selwana</title>
+
+  <!-- REQUIRED META TAGS -->
+  <meta name="description" content="Product review form for WDD131. Users can rate products, select features, and submit feedback.">
   <meta name="author" content="Katleho Selwana">
 
+  <!-- REQUIRED GOOGLE FONTS FIX -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/form.css">
+
+  <!-- JS -->
   <script src="scripts/form.js" defer></script>
   <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1>Product Review</h1>
-  </header>
+<header>
+  <h1>Product Review Form</h1>
+</header>
 
-  <main>
-    <form method="get" action="review.html">
+<main>
+  <form method="get" action="review.html">
 
-      <!-- Product select will be filled by JS -->
+    <!-- PRODUCT NAME -->
+    <label for="product">Product Name</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Select a Product ...</option>
+      <!-- JS will populate other options -->
+    </select>
 
-      <label for="product">Product Name</label>
-      <select id="product" name="product" required>
-        <option value="" disabled selected>Select a Product ...</option>
-      </select>
+    <!-- OVERALL RATING -->
+    <fieldset class="rating">
+      <legend>Overall Rating</legend>
 
-      <!-- Rating -->
-      <div class="rating-group">
-        <p>Overall Rating</p>
+      <label for="rate1">
+        <input type="radio" id="rate1" name="rating" value="1" required> ★
+      </label>
 
-        <label for="rate1">☆</label>
-        <input type="radio" id="rate1" name="rating" value="1" required>
+      <label for="rate2">
+        <input type="radio" id="rate2" name="rating" value="2" required> ★★
+      </label>
 
-        <label for="rate2">☆☆</label>
-        <input type="radio" id="rate2" name="rating" value="2" required>
+      <label for="rate3">
+        <input type="radio" id="rate3" name="rating" value="3" required> ★★★
+      </label>
 
-        <label for="rate3">☆☆☆</label>
-        <input type="radio" id="rate3" name="rating" value="3" required>
+      <label for="rate4">
+        <input type="radio" id="rate4" name="rating" value="4" required> ★★★★
+      </label>
 
-        <label for="rate4">☆☆☆☆</label>
-        <input type="radio" id="rate4" name="rating" value="4" required>
+      <label for="rate5">
+        <input type="radio" id="rate5" name="rating" value="5" required> ★★★★★
+      </label>
+    </fieldset>
 
-        <label for="rate5">☆☆☆☆☆</label>
-        <input type="radio" id="rate5" name="rating" value="5" required>
-      </div>
+    <!-- DATE INSTALLED -->
+    <label for="installDate">Date of Installation</label>
+    <input type="date" id="installDate" name="installDate" required>
 
-      <!-- Date -->
-      <label for="install">Date of Installation</label>
-      <input type="date" id="install" name="install" required>
+    <!-- FEATURES -->
+    <fieldset class="features">
+      <legend>Useful Features</legend>
 
-      <!-- Checkboxes -->
-      <div class="features">
-        <p>Useful Features</p>
+      <label for="feature1">
+        <input type="checkbox" id="feature1" name="features" value="easy-install">
+        Easy Installation
+      </label>
 
-        <label><input type="checkbox" id="feature1" name="features" value="durable"> Durable</label>
-        <label><input type="checkbox" id="feature2" name="features" value="easy"> Easy to Use</label>
-        <label><input type="checkbox" id="feature3" name="features" value="portable"> Portable</label>
-        <label><input type="checkbox" id="feature4" name="features" value="affordable"> Affordable</label>
-      </div>
+      <label for="feature2">
+        <input type="checkbox" id="feature2" name="features" value="durable">
+        High Durability
+      </label>
 
-      <!-- Review text -->
-      <label for="review">Written Review</label>
-      <textarea id="review" name="review"></textarea>
+      <label for="feature3">
+        <input type="checkbox" id="feature3" name="features" value="energy-saving">
+        Energy Saving
+      </label>
 
-      <!-- Name -->
-      <label for="username">Your Name</label>
-      <input type="text" id="username" name="username">
+      <label for="feature4">
+        <input type="checkbox" id="feature4" name="features" value="warranty">
+        Long Warranty
+      </label>
+    </fieldset>
 
-      <input type="submit" value="Submit Review">
-    </form>
-  </main>
+    <!-- WRITTEN REVIEW -->
+    <label for="review">Written Review</label>
+    <textarea id="review" name="review" placeholder="Write your review here..."></textarea>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> | Katleho Selwana | South Africa</p>
-    <p id="lastModified"></p>
-  </footer>
+    <!-- USER NAME -->
+    <label for="username">Your Name (optional)</label>
+    <input type="text" id="username" name="username">
+
+    <input type="submit" value="Submit Review">
+  </form>
+</main>
+
+<footer>
+  <p>&copy; <span id="currentyear"></span> | Katleho Selwana | South Africa</p>
+  <p id="lastModified"></p>
+</footer>
+
 </body>
 </html>
-

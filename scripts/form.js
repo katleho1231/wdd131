@@ -1,21 +1,17 @@
-// PRODUCT ARRAY (GIVEN IN ASSIGNMENT)
+// Product Array
 const products = [
-  { id: "p1", name: "Laptop" },
-  { id: "p2", name: "Washing Machine" },
-  { id: "p3", name: "Microwave" },
-  { id: "p4", name: "Refrigerator" },
-  { id: "p5", name: "Bluetooth Speaker" }
+  { id: "p100", name: "Hammer" },
+  { id: "p200", name: "Screwdriver" },
+  { id: "p300", name: "Wrench" },
+  { id: "p400", name: "Electric Saw" }
 ];
 
-// DYNAMIC SELECT
-const selectElement = document.getElementById("product");
+const productSelect = document.querySelector("#product");
+
+// Populate select options
 products.forEach(product => {
   const option = document.createElement("option");
-  option.value = product.id;  // value = id
-  option.textContent = product.name; // displayed name
-  selectElement.appendChild(option);
+  option.value = product.id;
+  option.textContent = product.name;
+  productSelect.appendChild(option);
 });
-
-// FOOTER DATES
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
