@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #e69595;
+  color: #222;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.color-box {
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.wireframe {
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #080202;
+  margin: 10px 0;
+}
