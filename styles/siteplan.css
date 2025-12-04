@@ -1,30 +1,25 @@
-/* TYPOGRAPHY */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 20px;
-  line-height: 1.6;
+  background: #e69595;
+  color: #222;
 }
 
 h1, h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* COLOR DEMO BOXES */
 .color-box {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #000;
-  margin-right: 10px;
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  margin: 10px 0;
 }
 
-.primary { background-color: #1A1A2E; }
-.accent { background-color: #FFCA28; }
-.white { background-color: #fff; }
-
-header {
-  background: #1A1A2E;
-  color: white;
-  padding: 15px;
-  text-align: center;
+.wireframe {
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #080202;
+  margin: 10px 0;
 }
